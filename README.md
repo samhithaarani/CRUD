@@ -1,7 +1,6 @@
 # User Management Application
-
+![Screenshot](ui.png)
 This is a simple user management application built with React for the frontend and Express.js with MySQL for the backend. The application allows users to create, update, delete, and view user information.
-
 ## Features
 
 - **View Users**: Displays a list of all users.
@@ -54,9 +53,8 @@ CREATE TABLE users (
 );
 
 
-
    ```
 ## Usage 
 - Access the application by navigating to http://localhost:3000 in your web browser after starting both the frontend and backend servers.
 - Use the provided interface to manage users as described in the features section.
-![Screenshot](ui.png)
+
