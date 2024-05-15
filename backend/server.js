@@ -80,6 +80,21 @@ app.put('/update/:id', (req, res) => {
     });
 });
 
+app.delete('/delete/:id', (req, res) => {
+    const { id } = req.params;
+    console.log('Request to delete user with ID:', id);
+    const sql = "DELETE FROM users WHERE id = ?";
+    
+    db.query(sql, [id], (err, result) => {
+        if (err) {
+            console.error('Database error:', err);
+            return res.status(500).json("ERROR");
+        }
+        console.log('Delete Result:', result);
+        return res.json(result);
+    });
+});
+
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
